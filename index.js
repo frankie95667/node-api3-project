@@ -13,6 +13,6 @@ server.use(express.json());
 server.use('/api/users', users);
 server.use('/api/posts', posts);
 
-server.listen(PORT, () => {
+server.listen(process.env.PORT, () => {
     console.log(`Listening at http://localhost:${PORT}`)
 })
