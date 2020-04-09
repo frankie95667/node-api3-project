@@ -3,7 +3,7 @@ const express = require('express');
 const server = express();
 const users = require('./users/userRouter');
 const posts = require('./posts/postRouter');
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 server.use(function logger(req, res, next) {
     console.log(`[${new Date().toISOString()}] ${req.method} to ${req.url}`)
